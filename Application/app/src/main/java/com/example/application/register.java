@@ -26,7 +26,7 @@ import java.util.Map;
 
 
 public class register extends AppCompatActivity {
-    public class Register extends AppCompatActivity {
+    
         public static final String TAG="TAG";
     EditText email,password,name,phone;
     Button button;
@@ -101,4 +101,4 @@ public class register extends AppCompatActivity {
             }
         });
     }
-}}
+}
