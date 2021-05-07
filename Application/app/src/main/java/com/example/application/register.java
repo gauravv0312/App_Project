@@ -26,7 +26,6 @@ import java.util.Map;
 
 
 public class register extends AppCompatActivity {
-    
         public static final String TAG="TAG";
     EditText email,password,name,phone;
     Button button;
@@ -80,7 +79,7 @@ public class register extends AppCompatActivity {
                             userID=fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference=fStore.collection("User").document(userID);
                             Map<String,Object> User= new HashMap<>();
-                            User.put("fname:",Name);
+                            User.put("fname",Name);
                             User.put("email",Email);
                             User.put("phone",Phone);
                             documentReference.set(User).addOnSuccessListener(new OnSuccessListener<Void>() {
