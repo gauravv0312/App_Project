@@ -13,9 +13,11 @@ import java.util.ArrayList;
 
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
 
+    Context context
     ArrayList<model> datalist;
 
-    public CustomAdapter(ArrayList<model> datalist) {
+    public CustomAdapter(Context context,ArrayList<model> datalist) {
+        this.context = context;
         this.datalist = datalist;
     }
 
