@@ -47,9 +47,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, final int position) {
-        viewHolder.name.setText(datalist.get(position).getFname());
-        viewHolder.email.setText(datalist.get(position).getEmail());
-        viewHolder.number.setText(datalist.get(position).getPhone());
+        model models = datalist.get(position)
+        viewHolder.name.setText(models.getFname());
+        viewHolder.email.setText(models.getEmail());
+        viewHolder.number.setText(models.getPhone());
 
     }
 
