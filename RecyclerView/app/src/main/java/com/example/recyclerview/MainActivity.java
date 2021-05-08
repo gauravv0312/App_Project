@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         datalist=new ArrayList<>();
-        adapter=new CustomAdapter(datalist);
+        adapter=new CustomAdapter(this,datalist);
         recyclerView.setAdapter(adapter);
         fStore=FirebaseFirestore.getInstance();
 
