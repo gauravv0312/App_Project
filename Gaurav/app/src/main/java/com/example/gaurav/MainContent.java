@@ -1,6 +1,8 @@
 package com.example.gaurav;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +30,8 @@ public class MainContent extends AppCompatActivity {
         adapter= new CustomAdapter(datalist);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
+
         fStore=FirebaseFirestore.getInstance();
         fStore.collection("user").get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
